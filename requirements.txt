@@ -1,0 +1,7 @@
+cv2
+numpy
+tensorflow
+fastapi
+typing
+io
+PIL
