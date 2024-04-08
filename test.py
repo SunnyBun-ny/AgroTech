@@ -27,19 +27,9 @@ disease_mapping = {
 }
 
 modelFilePath = './agroTechModel.h5'
-app = FastAPI()
-
-origins = ["*"]
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
-)
-
+modelTestImage = './IMG_20221026_115327.jpg'
 model = load_model(modelFilePath)
-
+testImage = cv2.imread(modelTestImage)
 
 class Prediction(BaseModel):
     prediction: str
@@ -55,26 +45,16 @@ def preprocess_image(image):
     test_image = np.expand_dims(test_image, axis = 0) 
     return test_image
 
-@app.post('/predict', response_model=Prediction)
-async def predict(file: UploadFile = File(...)):
-    contents = await file.read()
-    image = Image.open(io.BytesIO(contents)) 
-    image = np.array(image) 
-    preprocessed_image = preprocess_image(image)
+def predict():
+    preprocessed_image = preprocess_image(testImage)
     prediction = predict_disease(preprocessed_image)
     
     pred = int(prediction[0])
 
     if pred in disease_mapping:
-        return {'prediction' :  disease_mapping[pred]}
+        print( disease_mapping[pred])
     else:
-        return {'prediction' : 'Unknown Disease'}
+        print("Unknown Disease")
 
-@app.get("/")
-def index():
-    return {'message' : 'Hello World'}
-
-if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
     
 #python -m uvicorn main:app --reload
