@@ -2,11 +2,10 @@ import uvicorn
 import cv2
 import numpy as np
 from tensorflow import keras
-from keras.preprocessing.image import img_to_array, load_img
+from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, File, UploadFile
-from typing import List
 import io
 from PIL import Image
 from pydantic import BaseModel
