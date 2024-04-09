@@ -2,3 +2,4 @@ Logo
 __pycache__
 test.py
 agroTechModel.h5
+*.env
