@@ -1,5 +1,3 @@
-import boto3
-import os
 import uvicorn
 import cv2
 import numpy as np
@@ -8,7 +6,7 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, File, UploadFile
-from io import BytesIO
+import io
 from PIL import Image
 from pydantic import BaseModel
 
@@ -27,29 +25,7 @@ disease_mapping = {
     11: "Uneven Size Fruit Disease"
 }
 
-# AWS credentials from Heroku config vars
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')  # Update with your S3 bucket name
-MODEL_KEY = 'agroTechModel.h5'     # Update with the key of your h5 model file in the bucket
-
-# Initialize S3 client
-s3 = boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-
-# Function to load h5 model from S3
-def load_h5_model_from_s3(bucket_name, key):
-    response = s3.get_object(Bucket=bucket_name, Key=key)
-    model_bytes = response['Body'].read()
-    model = load_model(BytesIO(model_bytes))
-    return model
-
-# Load the model from S3
-model = load_h5_model_from_s3(BUCKET_NAME, MODEL_KEY)
-
-
-
-
-
+modelFilePath = './agroTechModel.h5'
 app = FastAPI()
 
 origins = ["*"]
@@ -60,6 +36,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+model = load_model(modelFilePath)
 
 
 class Prediction(BaseModel):
@@ -79,7 +57,7 @@ def preprocess_image(image):
 @app.post('/predict', response_model=Prediction)
 async def predict(file: UploadFile = File(...)):
     contents = await file.read()
-    image = Image.open(BytesIO(contents)) 
+    image = Image.open(io.BytesIO(contents)) 
     image = np.array(image) 
     preprocessed_image = preprocess_image(image)
     prediction = predict_disease(preprocessed_image)
