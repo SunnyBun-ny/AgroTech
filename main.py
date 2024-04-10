@@ -9,6 +9,11 @@ from fastapi import FastAPI, File, UploadFile
 import io
 from PIL import Image
 from pydantic import BaseModel
+import os
+
+import subprocess
+if not os.path.isfile('agroTechModel.h5'):
+    subprocess.run(['curl --output model.h5 "https://github.com/SunnyBun-ny/AgroTech/blob/main/agroTechModel.h5"'], shell=True)
 
 disease_mapping = {
     0: "Canker Fruits Disease",
@@ -25,7 +30,7 @@ disease_mapping = {
     11: "Uneven Size Fruit Disease"
 }
 
-modelFilePath = './agroTechModel.h5'
+modelFilePath = './model.h5'
 app = FastAPI()
 
 origins = ["*"]
