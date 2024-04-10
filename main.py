@@ -10,10 +10,14 @@ import io
 from PIL import Image
 from pydantic import BaseModel
 import os
+import requests
 
-import subprocess
-if not os.path.isfile('agroTechModel.h5'):
-    subprocess.run(['curl --output model.h5 "https://github.com/SunnyBun-ny/AgroTech/blob/main/agroTechModel.h5"'], shell=True)
+# Check if model file exists, if not, download it
+if not os.path.isfile('model.h5'):
+    url = "https://github.com/SunnyBun-ny/AgroTech/raw/main/agroTechModel.h5"
+    r = requests.get(url)
+    with open('model.h5', 'wb') as f:
+        f.write(r.content)
 
 disease_mapping = {
     0: "Canker Fruits Disease",
@@ -79,7 +83,7 @@ def index():
     return {'message' : 'Hello World'}
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
 
     
 #python -m uvicorn main:app --reload
