@@ -78,3 +78,4 @@ if __name__ == '__main__':
 
     
 #python -m uvicorn main:app --reload
+# web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
