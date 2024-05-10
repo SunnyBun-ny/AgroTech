@@ -1,0 +1,147 @@
+{
+    "0": {
+        "id": 0,
+        "name": "Canker Fruits Disease",
+        "information": "Canker disease affects the fruit, causing lesions or cankers on the surface. It can lead to fruit rot and reduced yield.",
+        "precautions": [
+            "Use disease-resistant varieties.",
+            "Remove infected fruits and destroy them.",
+            "Apply fungicides at recommended intervals.",
+            "Keep the orchard clean and free from debris.",
+            "Ensure proper pruning to improve air circulation."
+        ]
+    },
+    "1": {
+        "id": 1,
+        "name": "Caterpillar Forms Leaf Disease",
+        "information": "Caterpillars feed on the leaves, causing holes and defoliation. Severe infestations can weaken the plant and reduce yield.",
+        "precautions": [
+            "Monitor for early signs of infestation.",
+            "Handpick caterpillars and destroy them.",
+            "Apply biological or chemical insecticides as necessary.",
+            "Use row covers to protect plants during vulnerable growth stages.",
+            "Encourage natural predators like birds and beneficial insects."
+        ]
+    },
+    "2": {
+        "id": 2,
+        "name": "Faint Color Fruit Disease",
+        "information": "This disease affects the coloration of fruits, causing them to appear pale or faded. It can result from nutrient deficiencies or environmental stress.",
+        "precautions": [
+            "Maintain balanced soil fertility with proper fertilization.",
+            "Ensure adequate irrigation and moisture management.",
+            "Monitor soil pH and adjust as needed.",
+            "Apply foliar sprays containing micronutrients like iron and manganese.",
+            "Protect fruits from excessive sunlight with shading or row covers."
+        ]
+    },
+    "3": {
+        "id": 3,
+        "name": "InitialBurn Leaf Disease",
+        "information": "Initial burn is characterized by yellowing or browning of leaf edges and tips. It is often caused by environmental stress factors like drought or excessive fertilizer.",
+        "precautions": [
+            "Avoid over-fertilization, especially with nitrogen-based fertilizers.",
+            "Ensure proper irrigation to maintain soil moisture levels.",
+            "Mulch around plants to conserve moisture and regulate soil temperature.",
+            "Provide shade during periods of intense sunlight.",
+            "Avoid planting in areas prone to waterlogging or poor drainage."
+        ]
+    },
+    "4": {
+        "id": 4,
+        "name": "Myrtle Rust Leaf Disease",
+        "information": "Myrtle rust is a fungal disease that affects plants in the Myrtaceae family. It causes yellow or orange spores on the undersides of leaves, leading to defoliation and reduced vigor.",
+        "precautions": [
+            "Prune affected branches to remove infected tissue.",
+            "Apply fungicides containing copper or sulfur to prevent spread.",
+            "Monitor for signs of infection and remove infected plants if necessary.",
+            "Promote good air circulation around plants to reduce humidity.",
+            "Avoid planting susceptible species in areas with a history of myrtle rust."
+        ]
+    },
+    "5": {
+        "id": 5,
+        "name": "Nutrition Deficiency Leaf Disease",
+        "information": "Nutritional deficiencies in plants can manifest as leaf discoloration, stunted growth, or abnormal leaf shapes. Common deficiencies include nitrogen, phosphorus, potassium, and iron.",
+        "precautions": [
+            "Conduct soil tests to assess nutrient levels and pH.",
+            "Fertilize plants with balanced formulations containing essential nutrients.",
+            "Use organic amendments like compost or manure to improve soil fertility.",
+            "Apply foliar sprays containing micronutrients as needed.",
+            "Monitor plant health regularly and address deficiencies promptly."
+        ]
+    },
+    "6": {
+        "id": 6,
+        "name": "SemiBurn Leaf Disease",
+        "information": "Semi-burn is a condition where leaf margins or tips turn brown or black due to various stress factors. These factors may include over-fertilization, underwatering, or exposure to harsh environmental conditions.",
+        "precautions": [
+            "Avoid excessive fertilization, especially with high-nitrogen fertilizers.",
+            "Ensure proper irrigation to maintain soil moisture levels.",
+            "Provide shade or protection from intense sunlight.",
+            "Mulch around plants to conserve moisture and regulate soil temperature.",
+            "Monitor for signs of stress and adjust care practices accordingly."
+        ]
+    },
+    "7": {
+        "id": 7,
+        "name": "Crack Fruits Disease",
+        "information": "Cracking or splitting of fruits can occur due to fluctuations in moisture levels, especially during periods of rapid growth. It can also result from irregular watering or calcium deficiency.",
+        "precautions": [
+            "Maintain consistent soil moisture levels by watering evenly and avoiding drought stress.",
+            "Apply mulch around plants to conserve moisture and reduce fluctuations.",
+            "Provide adequate calcium through soil amendments or foliar sprays.",
+            "Harvest fruits promptly when ripe to prevent overripening and cracking.",
+            "Monitor weather conditions and adjust watering practices accordingly."
+        ]
+    },
+    "8": {
+        "id": 8,
+        "name": "Diplodia Fruits Disease",
+        "information": "Diplodia fruit rot is caused by a fungal pathogen that infects fruits, causing brown lesions or rot. It is often associated with wounds or injuries to the fruit skin.",
+        "precautions": [
+            "Practice good sanitation by removing infected fruits and debris from the orchard.",
+            "Apply fungicides containing active ingredients like thiophanate-methyl or captan.",
+            "Promote good air circulation around plants to reduce humidity and minimize disease spread.",
+            "Avoid overhead irrigation to prevent water splashing and fungal spore dispersal.",
+            "Harvest fruits carefully to minimize damage and reduce entry points for pathogens."
+        ]
+    },
+    "9": {
+        "id": 9,
+        "name": "Fungi Fruits Disease",
+        "information": "Fungal diseases affecting fruits can manifest as spots, rot, or mold on the surface. They are often favored by high humidity and poor air circulation.",
+        "precautions": [
+            "Apply fungicides preventively, especially during periods of high disease pressure.",
+            "Promote good air circulation around plants through proper spacing and pruning.",
+            "Remove and destroy infected plant debris to reduce inoculum.",
+            "Use drip irrigation or soaker hoses to water plants at the base and minimize leaf wetness.",
+            "Harvest fruits promptly when ripe and handle them carefully to prevent bruising or injury."
+        ]
+    },
+    "10": {
+        "id": 10,
+        "name": "Shrink Leaf Disease",
+        "information": "Shrink leaf disease causes abnormal leaf development, leading to smaller, misshapen, or distorted leaves. It can result from genetic abnormalities, environmental stress, or nutrient deficiencies.",
+        "precautions": [
+            "Maintain balanced soil fertility with appropriate fertilization.",
+            "Monitor soil moisture levels and ensure adequate irrigation.",
+            "Avoid planting in areas prone to waterlogging or poor drainage.",
+            "Provide protection from extreme temperatures or weather conditions.",
+            "Monitor plant health and address any underlying issues promptly."
+        ]
+    },
+    "11": {
+        "id": 11,
+        "name": "Uneven Size Fruit Disease",
+        "information": "Uneven fruit size can occur due to various factors such as poor pollination, inadequate fertilization, or environmental stress. It can lead to reduced marketability and lower fruit quality.",
+        "precautions": [
+            "Ensure adequate pollination by encouraging pollinator activity.",
+            "Maintain balanced soil fertility with appropriate fertilization.",
+            "Provide consistent moisture through irrigation, especially during fruit development.",
+            "Thin fruits if necessary to promote uniform size and quality.",
+            "Monitor weather conditions and adjust cultural practices accordingly."
+        ]
+    }
+}
+
